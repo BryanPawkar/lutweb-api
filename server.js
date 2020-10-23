@@ -47,6 +47,6 @@ app.put('/image', (req, res) =>{
     image.handleImage(req, res, db, bcrypt)
 })
 
-app.listen(8000, ()=>{
+app.listen(process.env.PORT || 8000, ()=>{
     console.log('App funcionando perfectamente en puerto 8000'); 
 })
