@@ -12,10 +12,8 @@ const profile = require('./controllers/profile');
 const db = knex({
     client: 'pg',
     connection: {
-      host : 'postgresql-adjacent-44840',
-      user : 'postgres',
-      password : 'braco',
-      database : 'lutweb'
+      host : process.env.DATABASE_URL, 
+      ssl: true
     }
   }); 
 
